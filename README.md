@@ -1,16 +1,11 @@
-## DistgSSR: Disentangling Mechanism for Light Field Statial Super-Resolution
+## LF-DAnet: Learning a Degradation-Adaptive Network for Light Field Image Super-Resolution
 <br>
 <p align="center"> <img src="https://raw.github.com/YingqianWang/DistgSSR/master/Figs/DistgSSR.png" width="90%"> </p>
 
-This is the PyTorch implementation of the spatial SR method in our paper "Disentangling Light Fields for Super-Resolution and Disparity Estimation". Please refer to our [paper](https://arxiv.org/pdf/2202.10603.pdf) and [project page](https://yingqianwang.github.io/DistgLF) for details.<br>
+This is the PyTorch implementation of the method in our paper "Learning a Degradation-Adaptive Network for Light Field Image Super-Resolution". Please refer to our [paper](https://arxiv.org/pdf/2202.10603.pdf) for details.<br>
 
 ## News and Updates:
-* 2022-04-03: Checkpoints `DistgSSR_4xSR_9x9.pth.tar` is available.
-* 2022-03-10: Checkpoints `DistgSSR_4xSR_8x8.pth.tar` is available.
-* 2022-02-22: Optimize `LFdivide` and `LFintegrate`, and modify our codes to enable inference with a batch of patches.
-* 2022-02-22: Checkpoints `DistgSSR_4xSR_6x6.pth.tar` and `DistgSSR_4xSR_7x7.pth.tar` are available.
-* 2022-02-22: Our DistgSSR has been added into the repository [*BasicLFSR*](https://github.com/ZhengyuLiang24/BasicLFSR).
-* 2022-02-16: Our paper is accepted by IEEE TPAMI.
+* 2022-05-25: Repository is created.
 
 ## Preparation:
 #### 1. Requirement:
@@ -22,28 +17,7 @@ This is the PyTorch implementation of the spatial SR method in our paper "Disent
 * Run `Generate_Data_for_Train.m` to generate training data. The generated data will be saved in `./Data/train_kxSR_AxA/`.
 * Run `Generate_Data_for_Test.m` to generate test data. The generated data will be saved in `./Data/test_kxSR_AxA/`.
 #### 4. Download our pretrained models:
-We provide the models of each angular resolution (2×2 to 9×9) for 2×/4× SR. Download our models through the following links:
-| **Upscaling Factor** |  **Angular Resolution** | **Channel Depth** | **Download Link** |
-| :---------: |  :---------: | :----------: | :---------------: |
-|    2×SR  |   5×5  |  32  | [DistgSSR_2xSR_5x5_C32.pth.tar](https://wyqdatabase.s3.us-west-1.amazonaws.com/DistgSSR_2xSR_5x5_C32.pth.tar) |
-|    2×SR  |   2×2  |  64  | [DistgSSR_2xSR_2x2.pth.tar](https://wyqdatabase.s3.us-west-1.amazonaws.com/DistgSSR_2xSR_2x2.pth.tar) |
-|    2×SR  |   3×3  |  64  | [DistgSSR_2xSR_3x3.pth.tar](https://wyqdatabase.s3.us-west-1.amazonaws.com/DistgSSR_2xSR_3x3.pth.tar) |
-|    2×SR  |   4×4  |  64  | [DistgSSR_2xSR_4x4.pth.tar](https://wyqdatabase.s3.us-west-1.amazonaws.com/DistgSSR_2xSR_4x4.pth.tar) |
-|    2×SR  |   5×5  |  64  | [**DistgSSR_2xSR_5x5.pth.tar**](https://wyqdatabase.s3.us-west-1.amazonaws.com/DistgSSR_2xSR_5x5.pth.tar) |
-|    2×SR  |   6×6  |  64  | [DistgSSR_2xSR_6x6.pth.tar](https://wyqdatabase.s3.us-west-1.amazonaws.com/DistgSSR_2xSR_6x6.pth.tar) |
-|    2×SR  |   7×7  |  64  | [DistgSSR_2xSR_7x7.pth.tar](https://wyqdatabase.s3.us-west-1.amazonaws.com/DistgSSR_2xSR_7x7.pth.tar) |
-|    2×SR  |   8×8  |  64  | [DistgSSR_2xSR_8x8.pth.tar](https://wyqdatabase.s3.us-west-1.amazonaws.com/DistgSSR_2xSR_8x8.pth.tar) |
-|    2×SR  |   9×9  |  64  | [DistgSSR_2xSR_9x9.pth.tar](https://wyqdatabase.s3.us-west-1.amazonaws.com/DistgSSR_2xSR_9x9.pth.tar) |
-|    4×SR  |   5×5  |  32  | [DistgSSR_4xSR_5x5_C32.pth.tar](https://wyqdatabase.s3.us-west-1.amazonaws.com/DistgSSR_4xSR_5x5_C32.pth.tar) |
-|    4×SR  |   2×2  |  64  | [DistgSSR_4xSR_2x2.pth.tar](https://wyqdatabase.s3.us-west-1.amazonaws.com/DistgSSR_4xSR_2x2.pth.tar) |
-|    4×SR  |   3×3  |  64  | [DistgSSR_4xSR_3x3.pth.tar](https://wyqdatabase.s3.us-west-1.amazonaws.com/DistgSSR_4xSR_3x3.pth.tar) |
-|    4×SR  |   4×4  |  64  | [DistgSSR_4xSR_4x4.pth.tar](https://wyqdatabase.s3.us-west-1.amazonaws.com/DistgSSR_4xSR_4x4.pth.tar) |
-|    4×SR  |   5×5  |  64  | [**DistgSSR_4xSR_5x5.pth.tar**](https://wyqdatabase.s3.us-west-1.amazonaws.com/DistgSSR_4xSR_5x5.pth.tar) |
-|    4×SR  |   6×6  |  64  | [DistgSSR_4xSR_6x6.pth.tar](https://wyqdatabase.s3.us-west-1.amazonaws.com/DistgSSR_4xSR_6x6.pth.tar) |
-|    4×SR  |   7×7  |  64  | [DistgSSR_4xSR_7x7.pth.tar](https://wyqdatabase.s3.us-west-1.amazonaws.com/DistgSSR_4xSR_7x7.pth.tar) |
-|    4×SR  |   8×8  |  64  | [DistgSSR_4xSR_8x8.pth.tar](https://wyqdatabase.s3.us-west-1.amazonaws.com/DistgSSR_4xSR_8x8.pth.tar) |
-|    4×SR  |   9×9  |  64  | [DistgSSR_4xSR_9x9.pth.tar](https://wyqdatabase.s3.us-west-1.amazonaws.com/DistgSSR_4xSR_9x9.pth.tar) |
-
+We provide the models for 4× SR. Download our models through the following links:
 
 ## Train:
 * Set the hyper-parameters in `parse_args()` if needed. We have provided our default settings in the realeased codes.
