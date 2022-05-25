@@ -1,5 +1,29 @@
 ## LF-DAnet: Learning a Degradation-Adaptive Network for Light Field Image Super-Resolution
 <br>
+
+
+
+https://user-images.githubusercontent.com/31008389/170273972-9a50726f-499d-45de-9527-f2f198df457c.mp4
+
+
+
+https://user-images.githubusercontent.com/31008389/170275204-c2b14964-1112-49f1-9fba-ee54c5792dfa.mp4
+
+
+
+https://user-images.githubusercontent.com/31008389/170274935-b5a6fb5c-2dcf-4d15-a263-8907bbc89a50.mp4
+
+
+https://user-images.githubusercontent.com/31008389/170274111-6aaa7b15-e36e-4ee4-b647-fa0e6e0c73ea.mp4
+
+
+
+
+https://user-images.githubusercontent.com/31008389/170274976-5eb2f4b1-4dfb-4335-b1d3-8803a47a18de.mp4
+
+
+
+
 <p align="center"> <img src="https://raw.github.com/YingqianWang/DistgSSR/master/Figs/DistgSSR.png" width="90%"> </p>
 
 This is the PyTorch implementation of the method in our paper "Learning a Degradation-Adaptive Network for Light Field Image Super-Resolution". Please refer to our [paper](https://arxiv.org/pdf/2202.10603.pdf) for details.<br>
@@ -51,10 +75,10 @@ We provide the models for 4× SR. Download our models through the following link
 ## Citiation
 **If you find this work helpful, please consider citing:**
 ```
-@Article{DistgLF,
+@Article{LF-DAnet,
     author    = {Wang, Yingqian and Wang, Longguang and Wu, Gaochang and Yang, Jungang and An, Wei and Yu, Jingyi and Guo, Yulan},
-    title     = {Disentangling Light Fields for Super-Resolution and Disparity Estimation},
-    journal   = {IEEE Transactions on Pattern Analysis and Machine Intelligence}, 
+    title     = {Learning a Degradation-Adaptive Network for Light Field Image Super-Resolution},
+    journal   = {arxiv}, 
     year      = {2022},   
 }
 ```
