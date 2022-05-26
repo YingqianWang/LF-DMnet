@@ -7,7 +7,7 @@ This is the PyTorch implementation of the method in our paper "Learning a Degrad
 * 2022-05-25: Repository is created.
 
 
-## Video Demos:
+## Demo Videos:
 We show the SR results of our LF-DAnet on real LFs captured by Lytro Illum cameras. More examples are available [here](https://github.com/YingqianWang/LF-DAnet/blob/main/demo_videos.md). Note that, these videos have been compressed, and the results shown below are inferior to the original outputs of our LF-DAnet.
 
 https://user-images.githubusercontent.com/31008389/170413107-48568226-cebb-4bd0-8b59-93a115d03367.mp4
