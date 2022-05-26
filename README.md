@@ -8,7 +8,7 @@ This is the PyTorch implementation of the method in our paper "Learning a Degrad
 
 
 ## Video Demos:
-We show the results produced by our LF-DAnet on real-world LFs (captured by Lytro Illum cameras). More examples are available [here](demo video.md). Note that, these videos have been compressed, and the results shown below are inferior to the actual outputs of our LF-DAnet.
+We show the SR results of our LF-DAnet on real LFs captured by Lytro Illum cameras. More examples are available [here]([./LF-DAnet/demo_video.md](https://github.com/YingqianWang/LF-DAnet/blob/main/demo_videos.md)). Note that, these videos have been compressed, and the results shown below are inferior to the original outputs of our LF-DAnet.
 
 https://user-images.githubusercontent.com/31008389/170413107-48568226-cebb-4bd0-8b59-93a115d03367.mp4
 
