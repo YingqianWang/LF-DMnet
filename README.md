@@ -19,7 +19,9 @@ https://user-images.githubusercontent.com/31008389/170413144-b7ea1bbb-bf62-46a3-
 
 ## Visual Comparison to SOTA:
 
-Please view our [demo videos](https://wyqdatabase.s3.us-west-1.amazonaws.com/LF-DAnet_compare.mp4) for a visual comparison with existing state-of-the-art SR methods. <br>
+Please view our [demo videos](https://wyqdatabase.s3.us-west-1.amazonaws.com/LF-DAnet_compare.mp4) for a visual comparison with existing state-of-the-art SR methods. 
+
+<br>
 
 
 ## Citiation
