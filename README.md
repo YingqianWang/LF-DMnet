@@ -23,7 +23,7 @@ https://user-images.githubusercontent.com/31008389/170413144-b7ea1bbb-bf62-46a3-
 **If you find this work helpful, please consider citing:**
 ```
 @Article{LF-DAnet,
-    author    = {Wang, Yingqian and Liang, Zhengyu and Wang, Longguang and Yang, Jungang and An, Wei},
+    author    = {Wang, Yingqian and Liang, Zhengyu and Wang, Longguang and Yang, Jungang and An, Wei and Guo, Yulan},
     title     = {Learning a Degradation-Adaptive Network for Light Field Image Super-Resolution},
     journal   = {arxiv}, 
     year      = {2022},   
