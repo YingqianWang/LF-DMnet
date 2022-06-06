@@ -23,9 +23,9 @@ Please view [this videos](https://wyqdatabase.s3.us-west-1.amazonaws.com/LF-DAne
 
 <br>
 
-## Influence of input degradations to SR performance:
+## Adjustable input degradations:
 
-We develop an [online demo](https://zhengyuliang24.github.io/LF-DAnet-Page/) to show the influence of input degradations to the SR performance. You can adjust the kernel width and noise level by dragging the sliding blocks to understand their influence to the SR results.
+We develop an [online demo](https://zhengyuliang24.github.io/LF-DAnet-Page/) to show the real-world SR performance with respect to input degradations. You can adjust the kernel width and noise level by dragging the sliding blocks to understand their influence to the SR results.
 
 <br>
 
