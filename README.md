@@ -17,9 +17,15 @@ https://user-images.githubusercontent.com/31008389/170413144-b7ea1bbb-bf62-46a3-
 
 <br>
 
-## Visual Comparison to SOTA:
+## Visual Comparisons to SOTA:
 
-Please view our [demo videos](https://wyqdatabase.s3.us-west-1.amazonaws.com/LF-DAnet_compare.mp4) for a visual comparison with existing state-of-the-art SR methods. 
+Please view [this videos](https://wyqdatabase.s3.us-west-1.amazonaws.com/LF-DAnet_compare.mp4) for a visual comparison with existing state-of-the-art SR methods. 
+
+<br>
+
+## Influence of input degradations to SR performance:
+
+We develop an [online demo](https://zhengyuliang24.github.io/LF-DAnet-Page/) to show the influence of input degradations to the SR performance. You can adjust the kernel width and noise level by dragging the sliding blocks to understand their influence to the SR results.
 
 <br>
 
