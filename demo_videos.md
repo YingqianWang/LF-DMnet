@@ -1,10 +1,6 @@
 **We show the SR results of our LF-DAnet on LFs captured by Lytro Illum cameras. Note that, these videos have been compressed, and the results shown below are inferior to the original outputs of our LF-DAnet.**
 <br>
 
-https://user-images.githubusercontent.com/31008389/170412398-db179ea5-cf29-401a-bd9c-3496f7004a82.mp4
-
-https://user-images.githubusercontent.com/31008389/170412641-c1ac841d-0d4a-4509-b225-e81e6f07db2b.mp4
-
 https://user-images.githubusercontent.com/31008389/170412872-49b79c9a-0a63-4125-a29a-0455bf3c9b56.mp4
 
 https://user-images.githubusercontent.com/31008389/170412765-5bb46506-1779-47d9-9671-e7d49af97413.mp4
