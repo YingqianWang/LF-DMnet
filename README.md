@@ -4,6 +4,7 @@
 This is the PyTorch implementation of the method in our paper "Learning a Degradation-Adaptive Network for Light Field Image Super-Resolution".<br>
 
 ## News and Updates:
+* 2022-06-14: Paper is posted on arXiv. Codes are under final preparation and will be released before 1st July.
 * 2022-05-25: Repository is created.
 
 
