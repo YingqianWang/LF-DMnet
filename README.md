@@ -1,7 +1,7 @@
 ## LF-DAnet: Learning a Degradation-Adaptive Network for Light Field Image Super-Resolution
 <br>
 
-This is the PyTorch implementation of the method in our paper "Learning a Degradation-Adaptive Network for Light Field Image Super-Resolution". [paper](https://arxiv.org/pdf/2206.06214.pdf)<br>
+This is the PyTorch implementation of the method in our paper "Learning a Degradation-Adaptive Network for Light Field Image Super-Resolution".<br>
 
 ## News and Updates:
 * 2022-06-14: Paper is posted on [arXiv](https://arxiv.org/pdf/2206.06214.pdf). Codes are under final preparation and will be released soon.
@@ -39,7 +39,7 @@ We develop an [online demo](https://zhengyuliang24.github.io/LF-DAnet-Page/) to 
 @Article{LF-DAnet,
     author    = {Wang, Yingqian and Liang, Zhengyu and Wang, Longguang and Yang, Jungang and An, Wei and Guo, Yulan},
     title     = {Learning a Degradation-Adaptive Network for Light Field Image Super-Resolution},
-    journal   = {arxiv}, 
+    journal   = {arxiv:2206.06214}, 
     year      = {2022},   
 }
 ```
