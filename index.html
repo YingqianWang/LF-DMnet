@@ -1,0 +1,554 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<link href="LF-DAnet.css" rel="stylesheet" type="text/css" />
+
+<meta name="GENERATOR" content="MSHTML 11.00.10570.1001"></head>
+<body onLoad=" ">
+<div id="container" class="STYLE37">
+
+
+
+
+<!-- Title and Authors -->
+<br>
+<br>
+<p class="styleTittle" align="center">Learning a Degradation-Adaptive Network for Light Field Image Super-Resolution</p>
+<p style="padding:15px 0px 0px 0px" align="center"><span class="STYLEAuthor"> 
+	<a href="https://yingqianwang.github.io/" target="_blank">Yingqian Wang</a>, &nbsp;
+	<a>Zhengyu Liang</a>, &nbsp;
+	<a href="https://longguangwang.github.io/" target="_blank">Longguang Wang</a>, &nbsp;
+	<a>Jungang Yang</a>,&nbsp; 
+	<a>Wei An</a>,&nbsp 
+	<a href="http://yulanguo.me/" target="_blank">Yulan Guo</a> &nbsp;
+</span> 
+</p>
+<p style="padding:15px 0px 0px 0px" class="styleAffiliation" align="center">
+National University of Defense Technology<br>
+<br>
+
+
+
+<!-- Scene1 -->
+<!-- Figure -->
+<div id="Scene1_father" style="width: 1024; height: 709px;">
+	  <div id="Scene1_box2", class="wrapper", style="width:1024px; height:709px">
+		  	<div class="middle"> <img id="Scene1_img2", src="Figs/logs/Visual real LF 5x5_4x_Noise_00_Sigma_0.00/tmp_0.00/ISO_Chart_1__Decoded/ISO_Chart_1__Decoded_bicubic_CenterView.png", style="width:1024px; height:709px", draggable="false"> 
+			  	<div id='test1', style="position: absolute; top: 10px; left: 910px; font-size: 28px; background:#000; color: #FFF">Bicubic</div>
+		  	</div>
+		  	<div class="top"> <img id="Scene1_img1", src="Figs/logs/Visual real LF 5x5_4x_Noise_20_Sigma_1.50/tmp_1.50/ISO_Chart_1__Decoded/ISO_Chart_1__Decoded_DAnet_CenterView.png", style="width:1024px; height:709px", draggable="false"> 
+			  	<div id='test2', style="position: absolute; top: 10px; left: 10px;  font-size: 28px; background:#000; color: #FFF">DAnet</div>
+		  	</div>
+		  	<div id="Scene1_scroller_box", class="scroller scroller-top">
+		  	<svg id="Scene1_scroller", class="scroller__thumb" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 100 100">
+			  	<polygon points="0 50 37 68 37 32 0 50" style="fill:#FFAB91">
+			  	<polygon points="100 50 64 32 64 68 100 50" style="fill:#FFAB91">
+		  	</svg>		
+		  	</div>
+	
+
+	</div>
+</div>
+<br>
+<br>
+
+
+<!-- Single slider for Noise -->
+<link rel="stylesheet" href="slider.css">
+<p>Noise Level</p>
+<div id="Scene1_slider_noise" class="range-slider grad" style='--min:0; --max:75; --step:5; --value:20; --text-value:"20"; --prefix:""'>
+	<input id="Scene1_noise_value" type="range" min="0" max="75" step="5" value="20" oninput="this.parentNode.style.setProperty('--value',this.value); 
+	this.parentNode.style.setProperty('--text-value', JSON.stringify((+this.value).toLocaleString()))">
+	<output></output>
+	<div class='range-slider__progress'></div>
+</div>
+<br>
+<p>Kernel Width</p>
+<!-- Single slider for Sigma -->
+<div id="Scene1_slider_sigma" class="range-slider grad" style='--min:0; --max:4; --step:0.5; --value:1.5; --text-value:"1.5"; --prefix:""'>
+	<input id="Scene1_sigma_value" type="range" min="0" max="4" step="0.5" value="1.5" oninput="this.parentNode.style.setProperty('--value',this.value); 
+	this.parentNode.style.setProperty('--text-value', JSON.stringify((+this.value).toLocaleString()))">
+	<output></output>
+	<div class='range-slider__progress'></div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+<!-- Scene2 -->
+<!-- Figure -->
+<div id="Scene2_father" style="width: 1024; height: 709px;">
+	<div id="Scene2_box2", class="wrapper", style="width:1024px; height:709px">
+			<div class="middle"> <img id="Scene2_img2", src="Figs/logs/Visual real LF 5x5_4x_Noise_00_Sigma_0.00/tmp_0.00/general_11_esl/general_11_esl_bicubic_CenterView.png", style="width:1024px; height:709px", draggable="false"> 
+				<div id='test1', style="position: absolute; top: 10px; left: 910px; font-size: 28px; background:#000; color: #FFF">Bicubic</div>
+			</div>
+			<div class="top"> <img id="Scene2_img1", src="Figs/logs/Visual real LF 5x5_4x_Noise_20_Sigma_1.50/tmp_1.50/general_11_esl/general_11_esl_DAnet_CenterView.png", style="width:1024px; height:709px", draggable="false"> 
+				<div id='test2', style="position: absolute; top: 10px; left: 10px;  font-size: 28px; background:#000; color: #FFF">DAnet</div>
+			</div>
+			<div id="Scene2_scroller_box", class="scroller scroller-top">
+			<svg id="Scene2_scroller", class="scroller__thumb" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 100 100">
+				<polygon points="0 50 37 68 37 32 0 50" style="fill:#FFAB91">
+				<polygon points="100 50 64 32 64 68 100 50" style="fill:#FFAB91">
+			</svg>		
+			</div>
+  
+
+  </div>
+</div>
+<br>
+<br>
+
+
+<!-- Single slider for Noise -->
+<p>Noise Level</p>
+<div id="Scene2_slider_noise" class="range-slider grad" style='--min:0; --max:75; --step:5; --value:20; --text-value:"20"; --prefix:""'>
+	<input id="Scene2_noise_value" type="range" min="0" max="75" step="5" value="20" oninput="this.parentNode.style.setProperty('--value',this.value); 
+	this.parentNode.style.setProperty('--text-value', JSON.stringify((+this.value).toLocaleString()))">
+	<output></output>
+	<div class='range-slider__progress'></div>
+</div>
+<br>
+<p>Kernel Width</p>
+<!-- Single slider for Sigma -->
+<div id="Scene2_slider_sigma" class="range-slider grad" style='--min:0; --max:4; --step:0.5; --value:1.5; --text-value:"1.5"; --prefix:""'>
+	<input id="Scene2_sigma_value" type="range" min="0" max="4" step="0.5" value="1.5" oninput="this.parentNode.style.setProperty('--value',this.value); 
+	this.parentNode.style.setProperty('--text-value', JSON.stringify((+this.value).toLocaleString()))">
+	<output></output>
+	<div class='range-slider__progress'></div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<!-- Scene3 -->
+<!-- Figure -->
+<div id="Scene3_father" style="width: 1024; height: 576px;">
+	<div id="Scene3_box2", class="wrapper", style="width:1024px; height:576px">
+			<div class="middle"> <img id="Scene3_img2", src="Figs/logs/Visual real LF 5x5_4x_Noise_00_Sigma_0.00/tmp_0.00/Boxer/Boxer_bicubic_CenterView.png", style="width:1024px; height:576px", draggable="false"> 
+				<div id='test1', style="position: absolute; top: 10px; left: 910px; font-size: 28px; background:#000; color: #FFF">Bicubic</div>
+			</div>
+			<div class="top"> <img id="Scene3_img1", src="Figs/logs/Visual real LF 5x5_4x_Noise_20_Sigma_1.50/tmp_1.50/Boxer/Boxer_DAnet_CenterView.png", style="width:1024px; height:576px", draggable="false"> 
+				<div id='test2', style="position: absolute; top: 10px; left: 10px;  font-size: 28px; background:#000; color: #FFF">DAnet</div>
+			</div>
+			<div id="Scene3_scroller_box", class="scroller scroller-top">
+			<svg id="Scene3_scroller", class="scroller__thumb" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 100 100">
+				<polygon points="0 50 37 68 37 32 0 50" style="fill:#FFAB91">
+				<polygon points="100 50 64 32 64 68 100 50" style="fill:#FFAB91">
+			</svg>		
+			</div>
+  
+
+  </div>
+</div>
+<br>
+<br>
+
+
+<!-- Single slider for Noise -->
+<p>Noise Level</p>
+<div id="Scene3_slider_noise" class="range-slider grad" style='--min:0; --max:75; --step:5; --value:20; --text-value:"20"; --prefix:""'>
+	<input id="Scene3_noise_value" type="range" min="0" max="75" step="5" value="20" oninput="this.parentNode.style.setProperty('--value',this.value); 
+	this.parentNode.style.setProperty('--text-value', JSON.stringify((+this.value).toLocaleString()))">
+	<output></output>
+	<div class='range-slider__progress'></div>
+</div>
+<br>
+<p>Kernel Width</p>
+<!-- Single slider for Sigma -->
+<div id="Scene3_slider_sigma" class="range-slider grad" style='--min:0; --max:4; --step:0.5; --value:1.5; --text-value:"1.5"; --prefix:""'>
+	<input id="Scene3_sigma_value" type="range" min="0" max="4" step="0.5" value="1.5" oninput="this.parentNode.style.setProperty('--value',this.value); 
+	this.parentNode.style.setProperty('--text-value', JSON.stringify((+this.value).toLocaleString()))">
+	<output></output>
+	<div class='range-slider__progress'></div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<body>	
+    <script type="text/javascript">
+    	// box是装图片的容器,fa是图片移动缩放的范围,scale是控制缩放的小图标
+		var Scene1_box2 = document.getElementById("Scene1_box2");
+        var Scene1_fa = document.getElementById('Scene1_father');
+		var Scene1_scroller_box = document.getElementById("Scene1_scroller_box");
+		var Scene1_scroller = document.getElementById("Scene1_scroller");
+		var Scene1_img1 = document.getElementById("Scene1_img1");
+		var Scene1_img2 = document.getElementById("Scene1_img2");
+		var Scene1_slider_noise = document.getElementById("Scene1_slider_noise");
+		var Scene1_slider_sigma = document.getElementById("Scene1_slider_sigma");
+
+		// 读取Noise
+		Scene1_slider_noise.onmouseup = function (e) {
+			var Scene1_noise = document.getElementById("Scene1_noise_value").value;
+			var Scene1_sigma = document.getElementById("Scene1_sigma_value").value;
+			Scene1_sigma = parseFloat(Scene1_sigma).toFixed(2);
+			Scene1_noise = Scene1_noise < 10 ? '0' + Scene1_noise : Scene1_noise;
+			Scene1_img1.src = "Figs/logs/Visual real LF 5x5_4x_Noise_" + Scene1_noise + "_Sigma_" + Scene1_sigma + "/tmp_" + Scene1_sigma + "/ISO_Chart_1__Decoded/ISO_Chart_1__Decoded_DAnet_CenterView.png";
+		}
+
+		// 读取Noise
+		Scene1_slider_sigma.onmouseup = function (e) {
+			var Scene1_noise = document.getElementById("Scene1_noise_value").value;
+			var Scene1_sigma = document.getElementById("Scene1_sigma_value").value;
+			Scene1_sigma = parseFloat(Scene1_sigma).toFixed(2);
+			Scene1_noise = Scene1_noise < 10 ? '0' + Scene1_noise : Scene1_noise;
+			Scene1_img1.src = "Figs/logs/Visual real LF 5x5_4x_Noise_" + Scene1_noise + "_Sigma_" + Scene1_sigma + "/tmp_" + Scene1_sigma + "/ISO_Chart_1__Decoded/ISO_Chart_1__Decoded_DAnet_CenterView.png";
+		}
+		
+
+    </script>
+
+
+<script type="text/javascript">
+	// box是装图片的容器,fa是图片移动缩放的范围,scale是控制缩放的小图标
+	var Scene2_box2 = document.getElementById("Scene2_box2");
+	var Scene2_fa = document.getElementById('Scene2_father');
+	var Scene2_scroller_box = document.getElementById("Scene2_scroller_box");
+	var Scene2_scroller = document.getElementById("Scene2_scroller");
+	var Scene2_img1 = document.getElementById("Scene2_img1");
+	var Scene2_img2 = document.getElementById("Scene2_img2");
+	var Scene2_slider_noise = document.getElementById("Scene2_slider_noise");
+	var Scene2_slider_sigma = document.getElementById("Scene2_slider_sigma");
+
+	// 读取Noise
+	Scene2_slider_noise.onmouseup = function (e) {
+		var Scene2_noise = document.getElementById("Scene2_noise_value").value;
+		var Scene2_sigma = document.getElementById("Scene2_sigma_value").value;
+		Scene2_sigma = parseFloat(Scene2_sigma).toFixed(2);
+		Scene2_noise = Scene2_noise < 10 ? '0' + Scene2_noise : Scene2_noise;
+		Scene2_img1.src = "Figs/logs/Visual real LF 5x5_4x_Noise_" + Scene2_noise + "_Sigma_" + Scene2_sigma + "/tmp_" + Scene2_sigma + "/general_11_esl/general_11_esl_DAnet_CenterView.png";
+	}
+
+	// 读取Noise
+	Scene2_slider_sigma.onmouseup = function (e) {
+		var Scene2_noise = document.getElementById("Scene2_noise_value").value;
+		var Scene2_sigma = document.getElementById("Scene2_sigma_value").value;
+		Scene2_sigma = parseFloat(Scene2_sigma).toFixed(2);
+		Scene2_noise = Scene2_noise < 10 ? '0' + Scene2_noise : Scene2_noise;
+		Scene2_img1.src = "Figs/logs/Visual real LF 5x5_4x_Noise_" + Scene2_noise + "_Sigma_" + Scene2_sigma + "/tmp_" + Scene2_sigma + "/general_11_esl/general_11_esl_DAnet_CenterView.png";
+	}
+	
+
+</script>
+
+
+<script type="text/javascript">
+	// box是装图片的容器,fa是图片移动缩放的范围,scale是控制缩放的小图标
+	var Scene3_box2 = document.getElementById("Scene3_box2");
+	var Scene3_fa = document.getElementById('Scene3_father');
+	var Scene3_scroller_box = document.getElementById("Scene3_scroller_box");
+	var Scene3_scroller = document.getElementById("Scene3_scroller");
+	var Scene3_img1 = document.getElementById("Scene3_img1");
+	var Scene3_img2 = document.getElementById("Scene3_img2");
+	var Scene3_slider_noise = document.getElementById("Scene3_slider_noise");
+	var Scene3_slider_sigma = document.getElementById("Scene3_slider_sigma");
+
+	// 读取Noise
+	Scene3_slider_noise.onmouseup = function (e) {
+		var Scene3_noise = document.getElementById("Scene3_noise_value").value;
+		var Scene3_sigma = document.getElementById("Scene3_sigma_value").value;
+		Scene3_sigma = parseFloat(Scene3_sigma).toFixed(2);
+		Scene3_noise = Scene3_noise < 10 ? '0' + Scene3_noise : Scene3_noise;
+		Scene3_img1.src = "Figs/logs/Visual real LF 5x5_4x_Noise_" + Scene3_noise + "_Sigma_" + Scene3_sigma + "/tmp_" + Scene3_sigma + "/Boxer/Boxer_DAnet_CenterView.png";
+	}
+
+	// 读取Noise
+	Scene3_slider_sigma.onmouseup = function (e) {
+		var Scene3_noise = document.getElementById("Scene3_noise_value").value;
+		var Scene3_sigma = document.getElementById("Scene3_sigma_value").value;
+		Scene3_sigma = parseFloat(Scene3_sigma).toFixed(2);
+		Scene3_noise = Scene3_noise < 10 ? '0' + Scene3_noise : Scene3_noise;
+		Scene3_img1.src = "Figs/logs/Visual real LF 5x5_4x_Noise_" + Scene3_noise + "_Sigma_" + Scene3_sigma + "/tmp_" + Scene3_sigma + "/Boxer/Boxer_DAnet_CenterView.png";
+	}
+	
+
+</script>
+	
+	
+
+	<script>
+	// I hope this over-commenting helps. Let's do this!
+	// Let's use the 'active' variable to let us know when we're using it
+	let Scene1_active = false;
+	let Scene1_scrollerTop = document.querySelectorAll('.scroller-top')[0];
+
+
+	// First we'll have to set up our event listeners
+	// We want to watch for clicks on our scroller
+	Scene1_scrollerTop.addEventListener('mousedown',function(){
+		Scene1_active = "top";
+		Scene1_scrollerTop.classList.add('scrolling');
+	});
+	document.body.addEventListener('mouseup',function(){
+		Scene1_active = false;
+		Scene1_scrollerTop.classList.remove('scrolling');
+	});
+	document.body.addEventListener('mouseleave',function(){
+		Scene1_active = false;
+		Scene1_scrollerTop.classList.remove('scrolling');
+	});
+
+	// Let's figure out where their mouse is at
+	document.body.addEventListener('mousemove',function(e){
+	  if (!Scene1_active) return;
+	  // Their mouse is here...
+	  let x = e.pageX;
+	  // but we want it relative to our wrapper
+	  x -= document.querySelectorAll('.wrapper')[0].getBoundingClientRect().left;
+	  // Okay let's change our state
+	  scrollIt(x);
+	});
+
+	// Let's use this function
+	function scrollIt(x){
+	  // Calculate our transform
+	  let transform = Math.max(0,(Math.min(x,document.querySelector('.wrapper').offsetWidth)));
+	  // we show all our bottom image but how much of our middle and top,
+	  // that'll depend on what we're dragging
+	  // if we're dragging the top slider
+	  if (Scene1_active==="top"){
+		document.querySelectorAll('.top')[0].style.width = transform+"px";
+		Scene1_scrollerTop.style.left = transform-25+"px";
+		// if we're using scroller-top, top must always be to the left
+	  }
+	}
+
+	// Let's set our opening state based off the width, 
+	// we want to show a bit of both images so the user can see what's going on
+	Scene1_active = "top";
+	scrollIt(230);
+	Scene1_active = false;
+
+
+	// And finally let's repeat the process for touch events
+	Scene1_scrollerTop.addEventListener('touchstart',function(){
+		Scene1_active = "top";
+		Scene1_scrollerTop.classList.add('scrolling');
+	});
+	document.body.addEventListener('touchend',function(){
+		Scene1_active = false;
+		Scene1_scrollerTop.classList.remove('scrolling');
+	});
+	document.body.addEventListener('touchcancel',function(){
+		Scene1_active = false;
+		Scene1_scrollerTop.classList.remove('scrolling');
+	});
+
+	document.querySelectorAll('.wrapper')[0].addEventListener('touchmove',function(e){
+		if (!Scene1_active) return;
+		e.preventDefault();
+		let x = e.touches[0].pageX;
+		x -= document.querySelectorAll('.wrapper')[0].getBoundingClientRect().left;
+		scrollIt(x);
+	});
+	</script>
+	
+
+	<script>
+		// I hope this over-commenting helps. Let's do this!
+		// Let's use the 'active' variable to let us know when we're using it
+		let Scene2_active = false;
+		let Scene2_scrollerTop = document.querySelectorAll('.scroller-top')[1];
+	
+	
+		// First we'll have to set up our event listeners
+		// We want to watch for clicks on our scroller
+		Scene2_scrollerTop.addEventListener('mousedown',function(){
+			Scene2_active = "top";
+			Scene2_scrollerTop.classList.add('scrolling');
+		});
+		document.body.addEventListener('mouseup',function(){
+			Scene2_active = false;
+			Scene2_scrollerTop.classList.remove('scrolling');
+		});
+		document.body.addEventListener('mouseleave',function(){
+			Scene2_active = false;
+			Scene2_scrollerTop.classList.remove('scrolling');
+		});
+	
+		// Let's figure out where their mouse is at
+		document.body.addEventListener('mousemove',function(e){
+		  if (!Scene2_active) return;
+		  // Their mouse is here...
+		  let x = e.pageX;
+		  // but we want it relative to our wrapper
+		  x -= document.querySelectorAll('.wrapper')[1].getBoundingClientRect().left;
+		  // Okay let's change our state
+		  Scene2_scrollIt(x);
+		});
+	
+		// Let's use this function
+		function Scene2_scrollIt(x){
+		  // Calculate our transform
+		  let transform = Math.max(0,(Math.min(x,document.querySelector('.wrapper').offsetWidth)));
+		  // we show all our bottom image but how much of our middle and top,
+		  // that'll depend on what we're dragging
+		  // if we're dragging the top slider
+		  if (Scene2_active==="top"){
+			document.querySelectorAll('.top')[1].style.width = transform+"px";
+			Scene2_scrollerTop.style.left = transform-25+"px";
+			// if we're using scroller-top, top must always be to the left
+		  }
+		}
+	
+		// Let's set our opening state based off the width, 
+		// we want to show a bit of both images so the user can see what's going on
+		Scene2_active = "top";
+		Scene2_scrollIt(230);
+		Scene2_active = false;
+	
+	
+		// And finally let's repeat the process for touch events
+		Scene2_scrollerTop.addEventListener('touchstart',function(){
+			Scene2_active = "top";
+			Scene2_scrollerTop.classList.add('scrolling');
+		});
+		document.body.addEventListener('touchend',function(){
+			Scene2_active = false;
+			Scene2_scrollerTop.classList.remove('scrolling');
+		});
+		document.body.addEventListener('touchcancel',function(){
+			Scene2_active = false;
+			Scene2_scrollerTop.classList.remove('scrolling');
+		});
+	
+		document.querySelectorAll('.wrapper')[1].addEventListener('touchmove',function(e){
+			if (!Scene2_active) return;
+			e.preventDefault();
+			let x = e.touches[0].pageX;
+			x -= document.querySelectorAll('.wrapper')[1].getBoundingClientRect().left;
+			scrollIt(x);
+		});
+		</script>
+
+
+
+
+<script>
+	// I hope this over-commenting helps. Let's do this!
+	// Let's use the 'active' variable to let us know when we're using it
+	let Scene3_active = false;
+	let Scene3_scrollerTop = document.querySelectorAll('.scroller-top')[2];
+
+
+	// First we'll have to set up our event listeners
+	// We want to watch for clicks on our scroller
+	Scene3_scrollerTop.addEventListener('mousedown',function(){
+		Scene3_active = "top";
+		Scene3_scrollerTop.classList.add('scrolling');
+	});
+	document.body.addEventListener('mouseup',function(){
+		Scene3_active = false;
+		Scene3_scrollerTop.classList.remove('scrolling');
+	});
+	document.body.addEventListener('mouseleave',function(){
+		Scene3_active = false;
+		Scene3_scrollerTop.classList.remove('scrolling');
+	});
+
+	// Let's figure out where their mouse is at
+	document.body.addEventListener('mousemove',function(e){
+	  if (!Scene3_active) return;
+	  // Their mouse is here...
+	  let x = e.pageX;
+	  // but we want it relative to our wrapper
+	  x -= document.querySelectorAll('.wrapper')[2].getBoundingClientRect().left;
+	  // Okay let's change our state
+	  Scene3_scrollIt(x);
+	});
+
+	// Let's use this function
+	function Scene3_scrollIt(x){
+	  // Calculate our transform
+	  let transform = Math.max(0,(Math.min(x,document.querySelector('.wrapper').offsetWidth)));
+	  // we show all our bottom image but how much of our middle and top,
+	  // that'll depend on what we're dragging
+	  // if we're dragging the top slider
+	  if (Scene3_active==="top"){
+		document.querySelectorAll('.top')[2].style.width = transform+"px";
+		Scene3_scrollerTop.style.left = transform-25+"px";
+		// if we're using scroller-top, top must always be to the left
+	  }
+	}
+
+	// Let's set our opening state based off the width, 
+	// we want to show a bit of both images so the user can see what's going on
+	Scene3_active = "top";
+	Scene3_scrollIt(230);
+	Scene3_active = false;
+
+
+	// And finally let's repeat the process for touch events
+	Scene3_scrollerTop.addEventListener('touchstart',function(){
+		Scene3_active = "top";
+		Scene3_scrollerTop.classList.add('scrolling');
+	});
+	document.body.addEventListener('touchend',function(){
+		Scene3_active = false;
+		Scene3_scrollerTop.classList.remove('scrolling');
+	});
+	document.body.addEventListener('touchcancel',function(){
+		Scene3_active = false;
+		Scene3_scrollerTop.classList.remove('scrolling');
+	});
+
+	document.querySelectorAll('.wrapper')[2].addEventListener('touchmove',function(e){
+		if (!Scene3_active) return;
+		e.preventDefault();
+		let x = e.touches[0].pageX;
+		x -= document.querySelectorAll('.wrapper')[2].getBoundingClientRect().left;
+		scrollIt(x);
+	});
+	</script>
+
+
+
+
+
+<br><br>
+<div style="padding:10px 0px 5px 0px">
+	<p class="STYLESection" align="center">Citation</p>
+</div>
+<hr align="right", width="90%", style="BORDER-LEFT-STYLE: none; BORDER-TOP: gray 3px groove; HEIGHT: 0px; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; margin:auto">
+<div style="padding:10px 90px 10px 90px; font-size=16; color: #333; ">
+	<p style="padding:10px 10px 10px 10px; background-color:#EEE; font-size:14px; font-family:PmingLiu; line-height:23px;", align="left">
+	@Article{LF-DAnet,<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;author = {Wang, Yingqian and Liang, Zhengyu and Wang, Longguang and Yang, Jungang and An, Wei and Guo, Yulan},<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;title = {Learning a Degradation-Adaptive Network for Light Field Image Super-Resolution},<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;journal   = {arxiv},<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;year      = {2022}<br>
+}
+	</p>
+</div>
+
+
+<br><br>
+<div style="padding:10px 0px 5px 0px">
+	<p class="STYLESection" align="center">Contact</p>
+</div>
+<hr align="right", width="90%", style="BORDER-LEFT-STYLE: none; BORDER-TOP: gray 3px groove; HEIGHT: 0px; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; margin:auto">
+<div style="padding:12px 0px 0px 90px">
+	If you have any question, please feel free to contact <strong>wangyingqian16@nudt.edu.cn</strong>.
+	<br><br>
+</div>
+
+<br><br>
+
+
+<!-- site visitors begjin -->
+<table width="100%" border="0">
+	<tbody><tr>
+	  <th scope="col"><a href="https://clustrmaps.com/site/1bors" title="Visit tracker"><img src="//www.clustrmaps.com/map_v2.png?d=SuJ4wlDAM8e7gFd9sm_Y6DvhBi_Wpmay3vfukQBftoU&cl=ffffff"></a>
+	</th></tr></tbody></table>
+  <!-- site visitors end -->
+  <br><br><br>	
+
+</body></html>
