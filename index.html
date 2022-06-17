@@ -1,4 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
 <link href="LF-DAnet.css" rel="stylesheet" type="text/css" />
 
 <meta name="GENERATOR" content="MSHTML 11.00.10570.1001"></head>
@@ -6,26 +7,116 @@
 <div id="container" class="STYLE37">
 
 
+<meta name="GENERATOR" content="MSHTML 11.00.10570.1001"></head>
+<body onLoad=" ">
+<div id="container" class="STYLE37">
 
-
-<!-- Title and Authors -->
 <br>
-<br>
-<p class="styleTittle" align="center">Learning a Degradation-Adaptive Network for Light Field Image Super-Resolution</p>
-<p style="padding:15px 0px 0px 0px" align="center"><span class="STYLEAuthor"> 
-	<a href="https://yingqianwang.github.io/" target="_blank">Yingqian Wang</a>, &nbsp;
-	<a>Zhengyu Liang</a>, &nbsp;
-	<a href="https://longguangwang.github.io/" target="_blank">Longguang Wang</a>, &nbsp;
-	<a>Jungang Yang</a>,&nbsp; 
-	<a>Wei An</a>,&nbsp 
-	<a href="http://yulanguo.me/" target="_blank">Yulan Guo</a> &nbsp;
+<p class="styleTittle" align="center">Learning a Degradation-Adaptive Network for Light Field<br>Image Super-Resolution</p><br>
+<p align="center"><span class="STYLEAuthor"> 
+<a href="https://yingqianwang.github.io/" target="_blank">Yingqian Wang</a>, &nbsp;
+<a>Zhengyu Liang</a>,&nbsp;
+<a href="https://longguangwang.github.io/" target="_blank">Longguang Wang</a>, &nbsp;
+<a>Jungang Yang</a>,&nbsp;
+<a>Wei An</a>,&nbsp;
+<a href="http://yulanguo.me/" target="_blank">Yulan Guo</a>&nbsp;
 </span> 
 </p>
-<p style="padding:15px 0px 0px 0px" class="styleAffiliation" align="center">
-National University of Defense Technology<br>
 <br>
 
+<p class="styleAffiliation" align="center">
+College of Electronic Science and Technology, National University of Defense Technology.<br>
+<br><br>
+<table width="80%" border="0">
+  <tbody>
+  <tr>
+    <th scope="col"><img src="./Figs/LF-DAnet.gif" width="80%"></th></tr></tbody></table>
+<br><br>
 
+<p class="STYLESection" align="center">Abstract</p>
+<hr style="BORDER-LEFT-STYLE: none; BORDER-TOP: gray 3px groove; HEIGHT: 0px; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none">
+<div style="padding:20px 20px 20px 20px; font-size=20; color: #333; ">
+	<p style="padding:15px 15px 15px 15px; background-color:#EEE; font-size:16px; font-family:PmingLiu; line-height:23px;", align="justify">
+	Recent years have witnessed the great advances of deep neural networks (DNNs) in light field (LF) image super-resolution (SR). However, existing DNN-based LF image SR methods are developed on a single fixed degradation (e.g., bicubic downsampling), and thus cannot be applied to super-resolve real LF images with diverse degradations. In this paper, we propose the first method to handle LF image SR with multiple degradations. In our method, a practical LF degradation model that considers blur and noise is developed to approximate the degradation process of real LF images. Then, a degradation-adaptive network (LF-DAnet) is designed to incorporate the degradation prior into the SR process. By training on LF images with multiple synthetic degradations, our method can learn to adapt to different degradations while incorporating the spatial and angular information. Extensive experiments on both synthetically degraded and real-world LFs demonstrate the effectiveness of our method. Compared with existing state-of-the-art single and LF image SR methods, our method achieves superior SR performance under a wide range of degradations, and generalizes better to real LF images.
+	</p>
+</div>
+<br><br>
+
+
+<p class="STYLESection" align="center">Network Architecture</p>
+<hr style="BORDER-LEFT-STYLE: none; BORDER-TOP: gray 3px groove; HEIGHT: 0px; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none">
+
+<table width="100%" border="0">
+  <tbody>
+  <tr>
+    <th scope="col"><img src="./Figs/LF-DAnet.png" width="90%"></th></tr></tbody></table>
+<br><br>
+
+<p class="STYLESection" align="center">Quantitative Results</p>
+<hr style="BORDER-LEFT-STYLE: none; BORDER-TOP: gray 3px groove; HEIGHT: 0px; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none">
+<br>
+<p class="styleCaption" align="justify">Table 1: PSNR and SSIM results achieved by different methods on the HCInew, HCIold and STFgantry datasets under synthetic degradations (with different blur kernel widths and noise levels). Note that, the degradation degenerates to the bicubic downsampling degradation when kernel width and noise level equal to 0. Best results are in <b>bold faces</b>.</p>
+<table width="100%" border="0">
+  <tbody>
+  <tr>
+    <th scope="col"><img src="./Figs/Quantitative.png" width="100%"></th></tr></tbody></table>
+<br><br><br><br>
+
+
+<p class="STYLESection" align="center">Qualitative Results</p>
+<hr style="BORDER-LEFT-STYLE: none; BORDER-TOP: gray 3px groove; HEIGHT: 0px; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none">
+<br>
+
+<table width="100%" border="0">
+  <tbody>
+  <tr>
+    <th scope="col"><img src="./Figs/Visual-syn.png" width="100%"></th></tr></tbody></table>
+<p class="styleCaption" align="justify">Fig. 4: Visual results achieved by different methods on synthetically degraded LFs (kernel width = 1.5, noise level = 15) for 4×SR. The super-resolved center view images and horizontal EPIs are shown. The PSNR and SSIM scores on the presented scenes are reported below the zoom-in regions.</p><br><br><br>
+
+<table width="100%" border="0">
+  <tbody>
+  <tr>
+    <th scope="col"><img src="./Figs/Visual-lytro.png" width="100%"></th></tr></tbody></table>
+<p class="styleCaption" align="justify">Fig. 5:  Visual results achieved by different methods on real LFs captured by Lytro Illum cameras for 4×SR. Scenes Hublais from the INRIA dataset and general_11 from the STFlytro dataset are used as example scenes for comparison. The super-resolved center view images and horizontal EPIs are shown. For SRMD and our method, the input blur kernel width and noise level are set to 2 and 30, respectively. Groundtruth HR images are unavailable in this case.</p><br><br><br>
+	
+<table width="100%" border="0">
+  <tbody>
+  <tr>
+    <th scope="col"><img src="./Figs/Visual-raytrix.png" width="100%"></th></tr></tbody></table>
+<p class="styleCaption" align="justify">Fig. 6: Visual results achieved by different methods on real LFs captured by a Raytrix camera for 4×SR. The super-resolved center view images and horizontal EPIs are shown. For SRMD and our method, the input blur kernel width and noise level are set to 4 and 60, respectively. Groundtruth HR images are unavailable in this case.</p><br><br><br><br>
+
+<p class="STYLESection" align="center">Performance Comparison via Videos</p>
+<hr style="BORDER-LEFT-STYLE: none; BORDER-TOP: gray 3px groove; HEIGHT: 0px; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none">
+<br>
+
+<table width="100%" border="0">
+  <tbody>
+  <tr>
+    <th scope="col">
+      <video controls="controls" width="100%" src="https://wyqdatabase.s3.us-west-1.amazonaws.com/LF-DAnet_syn.mp4"></video>     
+	</th>
+  </tr>
+  </tbody>
+</table>
+<br><br><br>
+
+
+<table width="100%" border="0">
+  <tbody>
+  <tr>
+    <th scope="col">
+      <video controls="controls" width="100%" src="https://wyqdatabase.s3.us-west-1.amazonaws.com/LF-DAnet_real.mp4"></video>     
+	</th>
+  </tr>
+  </tbody>
+</table>
+<br><br><br><br>
+
+
+<p class="STYLESection" align="center">Online Interactive Demo</p>
+<hr style="BORDER-LEFT-STYLE: none; BORDER-TOP: gray 3px groove; HEIGHT: 0px; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none">
+<br>
+<p class="styleCaption" align="justify">We develop an online interactive demo to show the real-world SR performance with respect to input degradations. You can adjust the input kernel widths and noise levels by dragging the sliding blocks to understand their influence to the SR results.</p><br><br>
 
 <!-- Scene1 -->
 <!-- Figure -->
@@ -48,12 +139,10 @@ National University of Defense Technology<br>
 	</div>
 </div>
 <br>
-<br>
-
 
 <!-- Single slider for Noise -->
 <link rel="stylesheet" href="slider.css">
-<p>Noise Level</p>
+<p class="STYLEAuthor" align="center"><b>Noise Level</b></p>
 <div id="Scene1_slider_noise" class="range-slider grad" style='--min:0; --max:75; --step:5; --value:20; --text-value:"20"; --prefix:""'>
 	<input id="Scene1_noise_value" type="range" min="0" max="75" step="5" value="20" oninput="this.parentNode.style.setProperty('--value',this.value); 
 	this.parentNode.style.setProperty('--text-value', JSON.stringify((+this.value).toLocaleString()))">
@@ -61,7 +150,7 @@ National University of Defense Technology<br>
 	<div class='range-slider__progress'></div>
 </div>
 <br>
-<p>Kernel Width</p>
+<p class="STYLEAuthor" align="center"><b>Kernel Width</b></p>
 <!-- Single slider for Sigma -->
 <div id="Scene1_slider_sigma" class="range-slider grad" style='--min:0; --max:4; --step:0.5; --value:1.5; --text-value:"1.5"; --prefix:""'>
 	<input id="Scene1_sigma_value" type="range" min="0" max="4" step="0.5" value="1.5" oninput="this.parentNode.style.setProperty('--value',this.value); 
@@ -98,11 +187,10 @@ National University of Defense Technology<br>
   </div>
 </div>
 <br>
-<br>
 
 
 <!-- Single slider for Noise -->
-<p>Noise Level</p>
+<p class="STYLEAuthor" align="center"><b>Noise Level</b></p>
 <div id="Scene2_slider_noise" class="range-slider grad" style='--min:0; --max:75; --step:5; --value:20; --text-value:"20"; --prefix:""'>
 	<input id="Scene2_noise_value" type="range" min="0" max="75" step="5" value="20" oninput="this.parentNode.style.setProperty('--value',this.value); 
 	this.parentNode.style.setProperty('--text-value', JSON.stringify((+this.value).toLocaleString()))">
@@ -110,7 +198,7 @@ National University of Defense Technology<br>
 	<div class='range-slider__progress'></div>
 </div>
 <br>
-<p>Kernel Width</p>
+<p class="STYLEAuthor" align="center"><b>Kernel Width</b></p>
 <!-- Single slider for Sigma -->
 <div id="Scene2_slider_sigma" class="range-slider grad" style='--min:0; --max:4; --step:0.5; --value:1.5; --text-value:"1.5"; --prefix:""'>
 	<input id="Scene2_sigma_value" type="range" min="0" max="4" step="0.5" value="1.5" oninput="this.parentNode.style.setProperty('--value',this.value); 
@@ -146,11 +234,10 @@ National University of Defense Technology<br>
   </div>
 </div>
 <br>
-<br>
 
 
 <!-- Single slider for Noise -->
-<p>Noise Level</p>
+<p class="STYLEAuthor" align="center"><b>Noise Level</b></p>
 <div id="Scene3_slider_noise" class="range-slider grad" style='--min:0; --max:75; --step:5; --value:20; --text-value:"20"; --prefix:""'>
 	<input id="Scene3_noise_value" type="range" min="0" max="75" step="5" value="20" oninput="this.parentNode.style.setProperty('--value',this.value); 
 	this.parentNode.style.setProperty('--text-value', JSON.stringify((+this.value).toLocaleString()))">
@@ -158,7 +245,7 @@ National University of Defense Technology<br>
 	<div class='range-slider__progress'></div>
 </div>
 <br>
-<p>Kernel Width</p>
+<p class="STYLEAuthor" align="center"><b>Kernel Width</b></p>
 <!-- Single slider for Sigma -->
 <div id="Scene3_slider_sigma" class="range-slider grad" style='--min:0; --max:4; --step:0.5; --value:1.5; --text-value:"1.5"; --prefix:""'>
 	<input id="Scene3_sigma_value" type="range" min="0" max="4" step="0.5" value="1.5" oninput="this.parentNode.style.setProperty('--value',this.value); 
@@ -508,18 +595,33 @@ National University of Defense Technology<br>
 		scrollIt(x);
 	});
 	</script>
-
-
-
-
-
 <br><br>
+
 <div style="padding:10px 0px 5px 0px">
-	<p class="STYLESection" align="center">Citation</p>
+	<p class="STYLESection" align="center">Materials</p>
 </div>
-<hr align="right", width="90%", style="BORDER-LEFT-STYLE: none; BORDER-TOP: gray 3px groove; HEIGHT: 0px; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; margin:auto">
-<div style="padding:10px 90px 10px 90px; font-size=16; color: #333; ">
-	<p style="padding:10px 10px 10px 10px; background-color:#EEE; font-size:14px; font-family:PmingLiu; line-height:23px;", align="left">
+<hr align="right", width="85%", style="BORDER-LEFT-STYLE: none; BORDER-TOP: gray 3px groove; HEIGHT: 0px; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; margin:auto">
+
+<div style="padding:12px 0px 10px 120px;", class="one" align="center">
+    <div style=" float: left" >
+		<a href="https://arxiv.org/pdf/2206.06214.pdf">
+		<img src="Figs/paper.png" height="150">
+		<p style="padding:0px 0px 20px 0px">Paper</p>
+		</a>
+	</div>
+	<div >
+		<a href="https://github.com/YingqianWang/LF-DAnet">
+		<img src="Figs/github.jpg" height="150">
+		<p style="padding:0px 0px 20px 0px">Code</p>
+		</a>
+	</div>
+</div>
+
+<p class="STYLESection" align="center">Citation</p>
+<hr style="BORDER-LEFT-STYLE: none; BORDER-TOP: gray 3px groove; HEIGHT: 0px; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none">
+
+<div style="padding:10px 20px 10px 20px; font-size=16; color: #333; ">
+	<p style="padding:20px 20px 20px 20px; background-color:#EEE; font-size:16px; font-family:PmingLiu; line-height:23px;", align="left">
 	@Article{LF-DAnet,<br>
 	&nbsp;&nbsp;&nbsp;&nbsp;author = {Wang, Yingqian and Liang, Zhengyu and Wang, Longguang and Yang, Jungang and An, Wei and Guo, Yulan},<br>
 	&nbsp;&nbsp;&nbsp;&nbsp;title = {Learning a Degradation-Adaptive Network for Light Field Image Super-Resolution},<br>
@@ -528,18 +630,10 @@ National University of Defense Technology<br>
 }
 	</p>
 </div>
-
-
 <br><br>
-<div style="padding:10px 0px 5px 0px">
-	<p class="STYLESection" align="center">Contact</p>
-</div>
-<hr align="right", width="90%", style="BORDER-LEFT-STYLE: none; BORDER-TOP: gray 3px groove; HEIGHT: 0px; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; margin:auto">
-<div style="padding:12px 0px 0px 90px">
-	If you have any question, please feel free to contact <strong>wangyingqian16@nudt.edu.cn</strong>.
-	<br><br>
-</div>
+<br><br><br><br>
+	
 
-<br><br>
-
+</pre></div>
 </body></html>
+

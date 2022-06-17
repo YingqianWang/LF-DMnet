@@ -1,20 +1,20 @@
 .styleTittle {
-	FONT-SIZE: 36px; FONT-FAMILY: "Arial"; 
+	FONT-SIZE: 40px; FONT-FAMILY: "Arial"; 
 }
 .STYLEAuthor {
-	FONT-SIZE: 17px; font-style: italic; color: #555; FONT-FAMILY: "PmingLiu";
+	FONT-SIZE: 18px; font-style: italic; color: #555; FONT-FAMILY: "PmingLiu";
 }
 .styleAffiliation {
 	FONT-SIZE: 16px; color: #555; FFONT-FAMILY: "PmingLiu";
 }
 .STYLESection {
-	FONT-SIZE: 24px; FONT-FAMILY: "Arial", Times, serif; FONT-WEIGHT: bold;
+	FONT-SIZE: 30px; FONT-FAMILY: "Arial", Times, serif; FONT-WEIGHT: bold;
 }
 .styleAbstract {
-	FONT-SIZE: 16px; FONT-FAMILY: "Arial";
+	FONT-SIZE: 20px; FONT-FAMILY: "Arial";
 }
 .STYLECaption {
-	FONT-SIZE: 16px; FONT-FAMILY: "Arial"
+	FONT-SIZE: 18px; FONT-FAMILY: "Arial"
 }
 .STYLECitation {
 	FONT-SIZE: 17px; FONT-FAMILY: "Arial"
