@@ -1,9 +1,10 @@
 ## LF-DAnet: Learning a Degradation-Adaptive Network for Light Field Image Super-Resolution
 <br>
 
-This is the PyTorch implementation of the method in our paper "Learning a Degradation-Adaptive Network for Light Field Image Super-Resolution".<br>
+This is the PyTorch implementation of the method in our paper "*Learning a Degradation-Adaptive Network for Light Field Image Super-Resolution*". [[project](https://yingqianwang.github.io/LF-DAnet/)], [[paper](https://arxiv.org/pdf/2206.06214.pdf)].<br>
 
 ## News and Updates:
+* 2022-06-17: Website is [online](https://yingqianwang.github.io/LF-DAnet/), on which we provided comparative videos and an interactive demo.
 * 2022-06-14: Paper is posted on [arXiv](https://arxiv.org/pdf/2206.06214.pdf). Codes are under final preparation and will be released soon.
 * 2022-05-25: Repository is created.
 
@@ -16,19 +17,6 @@ https://user-images.githubusercontent.com/31008389/170413144-b7ea1bbb-bf62-46a3-
 https://user-images.githubusercontent.com/31008389/170413107-48568226-cebb-4bd0-8b59-93a115d03367.mp4
 
 https://user-images.githubusercontent.com/31008389/172755168-80185192-72c6-44eb-8fca-cf3f984be377.mp4
-
-
-<br>
-
-## Visual Comparisons to SOTA:
-
-Please view [this video](https://wyqdatabase.s3.us-west-1.amazonaws.com/LF-DAnet_compare.mp4) for a visual comparison with existing state-of-the-art SR methods. 
-
-<br>
-
-## Adjustable input degradations:
-
-We develop an [online demo](https://zhengyuliang24.github.io/LF-DAnet-Page/) to show the real-world SR performance with respect to input degradations. You can adjust the kernel width and noise level by dragging the sliding blocks to understand their influence to the SR results.
 
 <br>
 
