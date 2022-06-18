@@ -10,7 +10,7 @@ This is the PyTorch implementation of the method in our paper "*Learning a Degra
 
 
 ## Demo Videos:
-We show the SR results of our LF-DAnet on real LFs captured by Lytro Illum cameras. More examples are available [here](https://github.com/YingqianWang/LF-DAnet/blob/main/demo_videos.md). Note that, these videos have been compressed, and the results shown below are inferior to the original outputs of our LF-DAnet.
+We show the SR results of our LF-DAnet on real LFs captured by Lytro Illum (the first two scenes) and Raytrix (the third scene) cameras. More examples are available [here](https://github.com/YingqianWang/LF-DAnet/blob/main/demo_videos.md). Note that, these videos have been compressed, and the results shown below are inferior to the original outputs of our LF-DAnet.
 
 https://user-images.githubusercontent.com/31008389/170413144-b7ea1bbb-bf62-46a3-91b6-80cf2813bd94.mp4
 
@@ -27,7 +27,7 @@ https://user-images.githubusercontent.com/31008389/172755168-80185192-72c6-44eb-
 @Article{LF-DAnet,
     author    = {Wang, Yingqian and Liang, Zhengyu and Wang, Longguang and Yang, Jungang and An, Wei and Guo, Yulan},
     title     = {Learning a Degradation-Adaptive Network for Light Field Image Super-Resolution},
-    journal   = {arxiv:2206.06214}, 
+    journal   = {arXiv preprint arXiv:2206.06214}, 
     year      = {2022},   
 }
 ```
