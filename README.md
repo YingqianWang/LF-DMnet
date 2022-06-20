@@ -10,16 +10,42 @@ This is the PyTorch implementation of the method in our paper "*Learning a Degra
 
 
 ## Demo Videos:
-We show the SR results of our LF-DAnet on real LFs captured by Lytro Illum (the first two scenes) and Raytrix (the third scene) cameras. More examples are available [here](https://github.com/YingqianWang/LF-DAnet/blob/main/demo_videos.md). Note that, these videos have been compressed, and the results shown below are inferior to the original outputs of our LF-DAnet.
+We show the SR results of our LF-DAnet on real LFs captured by Lytro Illum cameras. More examples are available [here](https://github.com/YingqianWang/LF-DAnet/blob/main/demo_videos.md). Note that, these videos have been compressed, and the results shown below are inferior to the original outputs of our LF-DAnet.
 
 https://user-images.githubusercontent.com/31008389/170413144-b7ea1bbb-bf62-46a3-91b6-80cf2813bd94.mp4
 
 https://user-images.githubusercontent.com/31008389/170413107-48568226-cebb-4bd0-8b59-93a115d03367.mp4
 
-https://user-images.githubusercontent.com/31008389/172755168-80185192-72c6-44eb-8fca-cf3f984be377.mp4
-
 <br>
 
+## Preparation:
+
+#### 1. Requirement:
+* PyTorch 1.3.0, torchvision 0.4.1. The code is tested with python=3.6, cuda=9.0.
+* Matlab for training/test data generation.
+
+#### 2. Datasets:
+* We used the HCInew, HCIold and STFgantry datasets for training and validation. Please first download the aforementioned datasets via [Baidu Drive](https://pan.baidu.com/s/1mYQR6OBXoEKrOk0TjV85Yw) (key:7nzy) or [OneDrive](https://stuxidianeducn-my.sharepoint.com/:f:/g/personal/zyliang_stu_xidian_edu_cn/EpkUehGwOlFIuSSdadq9S4MBEeFkNGPD_DlzkBBmZaV_mA?e=FiUeiv), and place these datasets to the folder `../Datasets/`.
+* We used the EPFL, INRIA and STFlytro datasets which are developed by using Lytro cameras to test the practical value of our method.
+* We also used an LF dataset captured by a Raytrix camera for test. Please download the Raytrix dataset here and place
+
+#### 3. Generating training/validation data:
+* Run `Generate_Data_for_Train.m` to generate training data. The generated data will be saved in `./Data/Train_MDSR_5x5/`.
+* Run `Generate_Data_for_Validation.m` to generate validation data. The generated data will be saved in `./Data/Validation_MDSR_5x5/`.
+
+## Train:
+* Set the hyper-parameters in `parse_args()` if needed. We have provided our default settings in the realeased codes.
+* Run `train.py` to perform network training.
+* Checkpoint will be saved to `./log/`.
+
+## Test the model on the validation sets (synthetic degradation):
+* Run `validation.py` to perform validation on each dataset.
+* The metric scores will be printed on the screen.
+
+## Test on your own LFs:
+* Place the input LFs into `./input` (see the attached examples).
+* Run `test.py` to perform SR. 
+* The super-resolved LF images will be automatically saved to `./output`.
 
 ## Citiation
 **If you find this work helpful, please consider citing:**
