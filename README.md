@@ -30,7 +30,7 @@ https://user-images.githubusercontent.com/31008389/170413107-48568226-cebb-4bd0-
 * We used the EPFL, INRIA and STFlytro datasets (which are developed by using Lytro cameras) to test the practical value of our method.
 
 #### 3. Generating training/validation data:
-* Run `Generate_Data_for_Train.m` to generate training data. The generated data will be saved in `./Data/Train_MDSR_5x5/`.
+* Run `GenerateDataForTraining.m` to generate training data. The generated data will be saved in `./Data/Train_MDSR_5x5/`.
 * Run `Generate_Data_for_Validation.m` to generate validation data. The generated data will be saved in `./Data/Validation_MDSR_5x5/`.
 
 ## Train:
