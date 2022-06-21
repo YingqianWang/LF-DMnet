@@ -4,6 +4,7 @@
 This is the PyTorch implementation of the method in our paper "*Learning a Degradation-Adaptive Network for Light Field Image Super-Resolution*". [[project](https://yingqianwang.github.io/LF-DAnet/)], [[paper](https://arxiv.org/pdf/2206.06214.pdf)].<br>
 
 ## News and Updates:
+* 2022-06-21: Codes and models are released. Welcome to try our codes and report the bugs/mistakes you meet.
 * 2022-06-17: Website is [online](https://yingqianwang.github.io/LF-DAnet/), on which we provided comparative videos and an interactive demo.
 * 2022-06-14: Paper is posted on [arXiv](https://arxiv.org/pdf/2206.06214.pdf). Codes are under final preparation and will be released soon.
 * 2022-05-25: Repository is created.
@@ -21,13 +22,12 @@ https://user-images.githubusercontent.com/31008389/170413107-48568226-cebb-4bd0-
 ## Preparation:
 
 #### 1. Requirement:
-* PyTorch 1.3.0, torchvision 0.4.1. The code is tested with python=3.6, cuda=9.0.
-* Matlab for training/test data generation.
+* PyTorch 1.3.0, torchvision 0.4.1. The code is tested with python=3.7, cuda=9.0.
+* Matlab for training/validation data generation.
 
 #### 2. Datasets:
 * We used the HCInew, HCIold and STFgantry datasets for training and validation. Please first download the aforementioned datasets via [Baidu Drive](https://pan.baidu.com/s/1mYQR6OBXoEKrOk0TjV85Yw) (key:7nzy) or [OneDrive](https://stuxidianeducn-my.sharepoint.com/:f:/g/personal/zyliang_stu_xidian_edu_cn/EpkUehGwOlFIuSSdadq9S4MBEeFkNGPD_DlzkBBmZaV_mA?e=FiUeiv), and place these datasets to the folder `../Datasets/`.
-* We used the EPFL, INRIA and STFlytro datasets which are developed by using Lytro cameras to test the practical value of our method.
-* We also used an LF dataset captured by a Raytrix camera for test. Please download the Raytrix dataset here and place
+* We used the EPFL, INRIA and STFlytro datasets (which are developed by using Lytro cameras) to test the practical value of our method.
 
 #### 3. Generating training/validation data:
 * Run `Generate_Data_for_Train.m` to generate training data. The generated data will be saved in `./Data/Train_MDSR_5x5/`.
@@ -38,7 +38,7 @@ https://user-images.githubusercontent.com/31008389/170413107-48568226-cebb-4bd0-
 * Run `train.py` to perform network training.
 * Checkpoint will be saved to `./log/`.
 
-## Test the model on the validation sets (synthetic degradation):
+## Validation (synthetic degradation):
 * Run `validation.py` to perform validation on each dataset.
 * The metric scores will be printed on the screen.
 
