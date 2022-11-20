@@ -31,7 +31,7 @@ https://user-images.githubusercontent.com/31008389/170413107-48568226-cebb-4bd0-
 
 #### 3. Generating training/validation data:
 * Run `GenerateDataForTraining.m` to generate training data. The generated data will be saved in `../Data/Train_MDSR_5x5/`.
-* Please download the validation data via [OneDrive](https://stuxidianeducn-my.sharepoint.com/personal/zyliang_stu_xidian_edu_cn/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fzyliang%5Fstu%5Fxidian%5Fedu%5Fcn%2FDocuments%2FDAnet%2FValidation%5FMDSR&ga=1) and place these data to the folder `../Data/Validation_MDSR_5x5/`.
+* Please download the validation data via [OneDrive](https://stuxidianeducn-my.sharepoint.com/:f:/g/personal/zyliang_stu_xidian_edu_cn/EgVU4b1ImNFMuchPObqZjLYBbI7zcfn_3tcM8bpXzphX5g) and place these data to the folder `../Data/Validation_MDSR_5x5/`.
 
 ## Train:
 * Set the hyper-parameters in `parse_args()` if needed. We have provided our default settings in the realeased codes.
