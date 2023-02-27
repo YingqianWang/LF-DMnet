@@ -168,9 +168,9 @@ def valid(test_loader, net):
 def augmentation(x, y):
     if random.random() < 0.5:  # flip along U-H direction
         x = torch.flip(x, dims=[1, 4])
-        x = torch.flip(x, dims=[1, 4])
+        y = torch.flip(y, dims=[1, 4])
     if random.random() < 0.5:  # flip along W-V direction
-        y = torch.flip(y, dims=[2, 5])
+        x = torch.flip(x, dims=[2, 5])
         y = torch.flip(y, dims=[2, 5])
     if random.random() < 0.5: # transpose between U-V and H-W
         x = x.permute(0, 2, 1, 3, 5, 4)
