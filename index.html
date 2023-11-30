@@ -12,14 +12,14 @@
 <div id="container" class="STYLE37">
 
 <br>
-<p class="styleTittle" align="center">Learning a Degradation-Adaptive Network for Light Field<br>Image Super-Resolution</p><br>
+<p class="styleTittle" align="center">Real-World Light Field Image Super-Resolution via<br>Degradation Modulation</p><br>
 <p align="center"><span class="STYLEAuthor"> 
 <a href="https://yingqianwang.github.io/" target="_blank">Yingqian Wang</a>, &nbsp;
 <a>Zhengyu Liang</a>,&nbsp;
 <a href="https://longguangwang.github.io/" target="_blank">Longguang Wang</a>, &nbsp;
 <a>Jungang Yang</a>,&nbsp;
 <a>Wei An</a>,&nbsp;
-<a href="http://yulanguo.me/" target="_blank">Yulan Guo</a>&nbsp;
+<a href="http://www.yulanguo.cn/" target="_blank">Yulan Guo</a>&nbsp;
 </span> 
 </p>
 <br>
@@ -37,7 +37,7 @@ College of Electronic Science and Technology, National University of Defense Tec
 <hr style="BORDER-LEFT-STYLE: none; BORDER-TOP: gray 3px groove; HEIGHT: 0px; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none">
 <div style="padding:20px 20px 20px 20px; font-size=20; color: #333; ">
 	<p style="padding:15px 15px 15px 15px; background-color:#EEE; font-size:16px; font-family:PmingLiu; line-height:23px;", align="justify">
-	Recent years have witnessed the great advances of deep neural networks (DNNs) in light field (LF) image super-resolution (SR). However, existing DNN-based LF image SR methods are developed on a single fixed degradation (e.g., bicubic downsampling), and thus cannot be applied to super-resolve real LF images with diverse degradations. In this paper, we propose the first method to handle LF image SR with multiple degradations. In our method, a practical LF degradation model that considers blur and noise is developed to approximate the degradation process of real LF images. Then, a degradation-adaptive network (LF-DAnet) is designed to incorporate the degradation prior into the SR process. By training on LF images with multiple synthetic degradations, our method can learn to adapt to different degradations while incorporating the spatial and angular information. Extensive experiments on both synthetically degraded and real-world LFs demonstrate the effectiveness of our method. Compared with existing state-of-the-art single and LF image SR methods, our method achieves superior SR performance under a wide range of degradations, and generalizes better to real LF images.
+	Recent years have witnessed the great advances of deep neural networks (DNNs) in light field (LF) image super-resolution (SR). However, existing DNN-based LF image SR methods are developed on a single fixed degradation (e.g., bicubic downsampling), and thus cannot be applied to super-resolve real LF images with diverse degradation. In this paper, we propose a simple yet effective method for real-world LF image SR. In our method, a practical LF degradation model is developed to formulate the degradation process of real LF images. Then, a convolutional neural network is designed to incorporate the degradation prior into the SR process. By training on LF images using our formulated degradation, our network can learn to modulate different degradation while incorporating both spatial and angular information in LF images. Extensive experiments on both synthetically degraded and real-world LF images demonstrate the effectiveness of our method. Compared with existing state-of-the-art single and LF image SR methods, our method achieves superior SR performance under a wide range of degradation, and generalizes better to real LF images.
 	</p>
 </div>
 <br><br>
@@ -49,7 +49,7 @@ College of Electronic Science and Technology, National University of Defense Tec
 <table width="100%" border="0">
   <tbody>
   <tr>
-    <th scope="col"><img src="./Figs/LF-DAnet.png" width="90%"></th></tr></tbody></table>
+    <th scope="col"><img src="./Figs/LF-DMnet.png" width="90%"></th></tr></tbody></table>
 <br><br>
 
 <p class="STYLESection" align="center">Quantitative Results</p>
