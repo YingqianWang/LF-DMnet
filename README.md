@@ -14,9 +14,15 @@ This is the PyTorch implementation of the method in our paper "*Real-World Light
 ## Demo Videos:
 We show the SR results of our LF-DMnet on real LFs captured by Lytro Illum cameras. More examples are available [here](https://github.com/YingqianWang/LF-DMnet/blob/main/demo_videos.md). Note that, these videos have been compressed, and the results shown below are inferior to the original outputs of our LF-DMnet.
 
-https://user-images.githubusercontent.com/31008389/170413144-b7ea1bbb-bf62-46a3-91b6-80cf2813bd94.mp4
 
-https://user-images.githubusercontent.com/31008389/170413107-48568226-cebb-4bd0-8b59-93a115d03367.mp4
+
+https://github.com/YingqianWang/LF-DMnet/assets/31008389/73490c47-9a51-490a-a4b1-0794d4706d77
+
+
+
+https://github.com/YingqianWang/LF-DMnet/assets/31008389/c41ae453-030b-4d58-8442-f59bed2cbc39
+
+
 
 <br>
 
