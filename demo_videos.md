@@ -1,4 +1,4 @@
-**We show the SR results of our LF-DAnet on LFs captured by Lytro Illum cameras. Note that, these videos have been compressed, and the results shown below are inferior to the original outputs of our LF-DAnet.**
+**We show the SR results of our LF-DMnet on LFs captured by Lytro Illum cameras. Note that, these videos have been compressed, and the results shown below are inferior to the original outputs of our LF-DMnet.**
 <br>
 
 https://github.com/YingqianWang/LF-DMnet/assets/31008389/21a11896-4750-422c-b68b-5d96ec941cc1
