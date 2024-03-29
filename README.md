@@ -4,6 +4,7 @@
 This is the PyTorch implementation of the method in our paper "*Real-World Light Field Image Super-Resolution via Degradation Modulation*". [[project](https://yingqianwang.github.io/LF-DMnet/)], [[paper](https://arxiv.org/pdf/2206.06214.pdf)].<br>
 
 ## News and Updates:
+* 2024-03-14: Our paper is accepted by IEEE TNNLS.
 * 2023-12-01: Revised paper is posted on [arXiv](https://arxiv.org/pdf/2206.06214.pdf).
 * 2022-06-21: Codes and models are released. Welcome to try our codes and report the bugs/mistakes you meet.
 * 2022-06-17: Website is [online](https://yingqianwang.github.io/LF-DMnet/), on which we provided comparative videos and an interactive demo.
@@ -60,8 +61,8 @@ https://github.com/YingqianWang/LF-DMnet/assets/31008389/c41ae453-030b-4d58-8442
 @Article{LF-DMnet,
     author    = {Wang, Yingqian and Liang, Zhengyu and Wang, Longguang and Yang, Jungang and An, Wei and Guo, Yulan},
     title     = {Real-World Light Field Image Super-Resolution via Degradation Modulation},
-    journal   = {arXiv preprint arXiv:2206.06214}, 
-    year      = {2022},   
+    journal   = {IEEE Transactions on Neural Networks and Learning Systems}, 
+    year      = {2024},   
 }
 ```
 <br>
