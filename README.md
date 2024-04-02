@@ -1,7 +1,7 @@
 ## LF-DMnet: Real-World Light Field Image Super-Resolution via Degradation Modulation
 <br>
 
-This is the PyTorch implementation of the method in our paper "*Real-World Light Field Image Super-Resolution via Degradation Modulation*". [[project](https://yingqianwang.github.io/LF-DMnet/)], [[paper](https://arxiv.org/pdf/2206.06214.pdf)].<br>
+This is the PyTorch implementation of the method in our paper "*Real-World Light Field Image Super-Resolution via Degradation Modulation*". [[project](https://yingqianwang.github.io/LF-DMnet/)], [[paper](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10486857)].<br>
 
 ## News and Updates:
 * 2024-04-01: Our paper is published on IEEE TNNLS. [[pdf](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10486857)]
